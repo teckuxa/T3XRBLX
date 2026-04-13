@@ -1,0 +1,307 @@
+@font-face {
+  font-family: 'Roblox2017';
+  src: url('2017.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roblox2016';
+  src: url('2016.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Bootstrap --- */
+.bootstrap-body {
+  background: #E1E1E1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #000;
+}
+
+.splash-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-placeholder {
+  font-size: 64px;
+}
+
+.logo {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.logo-small {
+  height: 36px;
+  object-fit: contain;
+}
+
+.launcher-title {
+  font-family: 'Roblox2017', sans-serif;
+  font-size: 48px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #000;
+}
+
+/* --- Titlebar --- */
+.titlebar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  background: #0078D7;
+  -webkit-app-region: drag;
+  font-family: 'Roblox2016', sans-serif;
+  -webkit-text-stroke: 1px red;
+  flex-shrink: 0;
+}
+
+.titlebar-title {
+  color: white;
+  font-size: 20px;
+}
+
+.titlebar-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  -webkit-app-region: no-drag;
+}
+
+.titlebar-buttons button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  width: 32px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.titlebar-buttons button:hover {
+  background: #ffffff30;
+}
+
+.titlebar-buttons .close-btn:hover {
+  background: #e94560;
+}
+
+/* --- Launcher page --- */
+.launcher-body {
+  background: #E1E1E1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  overflow: hidden;
+}
+
+.navbar {
+  background: #0078D7;
+  padding: 0 16px;
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.nav-logo {
+  color: white;
+  font-family: 'Roblox2016', sans-serif;
+  font-size: 24px;
+  padding: 7px 14px 7px 0;
+  margin-right: 8px;
+  border-right: 1px solid rgba(255,255,255,0.3);
+  -webkit-text-stroke: 1.5px #cc0000;
+  paint-order: stroke fill;
+}
+
+.nav-tab {
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+  padding: 9px 14px;
+  cursor: default;
+  border-radius: 3px 3px 0 0;
+  user-select: none;
+}
+
+.nav-tab.active {
+  background: #E1E1E1;
+  color: #333;
+  font-weight: 600;
+}
+
+.nav-tab:not(.active):hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.page-content {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "thumb sidebar"
+    "desc  meta";
+  gap: 0 16px;
+  padding: 16px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.game-thumbnail {
+  grid-area: thumb;
+  background: #1a1a2e;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.thumb-inner {
+  font-family: 'Roblox2016', sans-serif;
+  font-size: 80px;
+  color: white;
+  -webkit-text-stroke: 3px #cc0000;
+  paint-order: stroke fill;
+  opacity: 0.85;
+}
+
+.game-sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.game-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+
+.game-creator {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.creator-link {
+  color: #0078D7;
+  cursor: default;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.play-btn {
+  background: #00B06F;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.play-btn:hover { background: #009960; }
+
+.game-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 4px 0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-icon { font-size: 18px; }
+.stat-label { font-size: 11px; color: #888; }
+
+.game-description {
+  grid-area: desc;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #444;
+  margin-top: 12px;
+}
+
+.game-meta-line { color: #555; }
+
+.game-meta-box {
+  grid-area: meta;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px 14px;
+  margin-top: 12px;
+  align-self: start;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 5px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.meta-row:last-child { border-bottom: none; }
+.meta-key { color: #888; }
+.meta-val { color: #333; font-weight: 600; }
+
+.error-msg {
+  color: red;
+  font-size: 12px;
+  padding: 0 16px 8px;
+  flex-shrink: 0;
+}

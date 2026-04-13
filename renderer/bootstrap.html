@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>T3X Launcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bootstrap-body">
+
+  <div class="titlebar">
+    <span class="titlebar-title">T3X Launcher</span>
+    <div class="titlebar-buttons">
+      <button onclick="window.electronAPI.minimizeWindow()">─</button>
+      <button onclick="window.electronAPI.closeWindow()" class="close-btn">✕</button>
+    </div>
+  </div>
+
+  <div class="splash-card">
+    <img src="t3xin.png" class="logo" alt="T3X Logo">
+    <p class="subtitle">Classic Roblox Clients</p>
+    <button class="start-btn" onclick="window.electronAPI.openLauncher()">
+      ▶ Start T3X Launcher
+    </button>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "name": "t3x-launcher",
+  "version": "1.0.0",
+  "description": "T3X Classic Roblox Launcher",
+  "author": "T3X Team",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.t3x.launcher",
+    "productName": "T3X Launcher",
+    "win": {
+      "target": "nsis",
+      "icon": "renderer/t3x2.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "**/*",
+      "!node_modules/.cache"
+    ],
+    "extraResources": [
+      {
+        "from": "clients/",
+        "to": "clients/",
+        "filter": ["**/*"]
+      }
+    ]
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {}
+}

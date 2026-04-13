@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="launcher-body">
+
+  <div class="titlebar">
+    <span class="titlebar-title">T3X Launcher</span>
+    <div class="titlebar-buttons">
+      <button onclick="window.electronAPI.minimizeWindow()">─</button>
+      <button onclick="window.electronAPI.closeWindow()" class="close-btn">✕</button>
+    </div>
+  </div>
+
+  <div class="navbar">
+    <span class="nav-logo">T3X</span>
+    <span class="nav-tab active">Home</span>
+    <span class="nav-tab">Charts</span>
+    <span class="nav-tab">Catalog</span>
+    <span class="nav-tab">Develop</span>
+  </div>
+
+  <div class="page-content">
+
+    <div class="game-thumbnail">
+        <img src="thumbnail.png" class="thumb-img" alt="2016M Studio">
+    </div>
+
+    <div class="game-sidebar">
+      <h1 class="game-title">Roblox Studio 2016M</h1>
+      <p class="game-creator">By <span class="creator-link">Roblox Corporation ( Patched by T3X )</span></p>
+
+      <div class="divider"></div>
+
+      <button class="play-btn" id="launch2016studio">Play</button>
+
+      <div class="divider"></div>
+
+      <div class="game-stats">
+        <div class="stat">
+          <span class="stat-icon">⭐</span>
+          <span class="stat-label">Favorited</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">👍</span>
+          <span class="stat-label">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">👎</span>
+          <span class="stat-label">—</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-description">
+      <p>
+        Welcome to <strong>Roblox Studio 2016M</strong> — a preserved build of the classic
+        Roblox Studio from mid-2016. Comes with classic interface, sounds, feel and nostalgia.
+      </p>
+      <br>
+      <p>
+        Use the Build tools, Scripts, and Explorer panel just like in the old days.
+        You can find preinstalled maps that you can play in T3X folder -> Maps.
+      </p>
+      <br>
+      <p class="game-meta-line">
+        <strong>Controls:</strong> Standard Roblox Studio keybinds apply.
+        F2 to rename, Ctrl+Z to undo, and the classic toolbox is right where you remember.
+      </p>
+    </div>
+
+    <div class="game-meta-box">
+      <div class="meta-row"><span class="meta-key">Patcher</span><span class="meta-val">Teckuxa ( T3X )</span></div>
+      <div class="meta-row"><span class="meta-key">Version</span><span class="meta-val">June 24 (0.249.0.77601) ( version-60bf7731791f4435 )</span></div>
+      <div class="meta-row"><span class="meta-key">Genre</span><span class="meta-val">Studio</span></div>
+      <div class="meta-row"><span class="meta-key">IsUserAllowed</span><span class="meta-val">True</span></div>
+      <div class="meta-row"><span class="meta-key">TrustCheck</span><span class="meta-val">True</span></div>
+      <div class="meta-row"><span class="meta-key">UserVerificationBypass</span><span class="meta-val">False ( Client is newer than 2012M )</span></div>
+    </div>
+
+  </div>
+
+  <div id="errorMsg" class="error-msg"></div>
+
+  <script src="launcher.js"></script>
+</body>
+</html>
