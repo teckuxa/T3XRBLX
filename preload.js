@@ -2,6 +2,7 @@ const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('electronAPI', {
   openLauncher:   ()          => ipcRenderer.send('open-launcher'),
+  openHome:       ()          => ipcRenderer.send('open-home'),
   closeWindow:    ()          => ipcRenderer.send('close-window'),
   minimizeWindow: ()          => ipcRenderer.send('minimize-window'),
   launchClient:   (exePath)   => ipcRenderer.send('launch-client', exePath),

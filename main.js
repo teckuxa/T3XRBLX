@@ -15,8 +15,8 @@ function getBasePath() {
 
 function createBootstrap() {
   bootstrapWindow = new BrowserWindow({
-    width: 500,
-    height: 400,
+    width: 900,
+    height: 600,
     frame: false,
     resizable: false,
     icon: path.join(__dirname, 'renderer/t3x2.png'),
@@ -95,3 +95,8 @@ ipcMain.on('minimize-window', () => {
 });
 
 app.whenReady().then(createBootstrap);
+
+ipcMain.on('open-home', () => {
+  createBootstrap();
+  if (launcherWindow) launcherWindow.close();
+});
